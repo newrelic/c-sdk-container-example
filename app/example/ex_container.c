@@ -8,6 +8,7 @@
  * start a transaction and a segment, and cleanly destroy
  * everything using a daemon on a different host.
  */
+#include "libnewrelic.h"
 #include "newrelic_common.h"
 
 int main(void) {
@@ -47,8 +48,12 @@ int main(void) {
   config = newrelic_create_app_config(app_name, license_key);
   customize_config(&config);
 
-  /* Wait up to 10 seconds for the SDK to connect to the daemon */
-  app = newrelic_create_app(config, 10000);
+  /* Change the transaction tracer threshold to ensure a trace is generated */
+  config->transaction_tracer.threshold = NEWRELIC_THRESHOLD_IS_OVER_DURATION;
+  config->transaction_tracer.duration_us = 1;
+
+  /* Wait up to 15 seconds for the SDK to connect to the daemon */
+  app = newrelic_create_app(config, 15000);
   newrelic_destroy_app_config(&config);
 
   /* Start a web transaction and a segment */
