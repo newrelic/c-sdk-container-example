@@ -1,13 +1,18 @@
+/*
+ * Copyright[2019] New Relic Corporation.All rights reserved.
+ * SPDX - License - Identifier : Apache - 2.0
+ */
+
+/*
+ * A standalone example that demonstrates to users how to configure logging,
+ * configure an app, connect an app, start a transaction and a segment, and
+ * cleanly destroy everything using a daemon on a different host.
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 
-/*
- * A standalone example that demonstrates to users how to
- * configure logging, configure an app, connect an app,
- * start a transaction and a segment, and cleanly destroy
- * everything using a daemon on a different host.
- */
 #include "libnewrelic.h"
 #include "newrelic_common.h"
 
