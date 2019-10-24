@@ -3,7 +3,7 @@
 **This is an unsupported example. This project is provided AS-IS WITHOUT
 WARRANTY OR SUPPORT.**
 
-The C SDK is a software development kit that allows users to manually instrument applications written in C or C++ for Linux 64-bit operating systems. With the release of [C-SDK version 1.2](https://github.com/newrelic/c-sdk/blob/master/CHANGELOG.md#120), the application and daemon no longer have to reside on the same host and can now communicate over an IPv4 or IPv6 TCP socket. This repository contains a simple application that demonstrates how an instrumented application and daemon can be set up on separate containers.
+The C SDK is a software development kit that allows users to create instrumentation for applications written in C and C++. You can also use it in languages like Perl, which are implemented in C or C++, and in any language that has a [foreign function interface](https://docs.newrelic.com/docs/agents/c-sdk/get-started/c-sdk-compatibility-requirements#language-release) with C. With the release of [C-SDK version 1.2](https://github.com/newrelic/c-sdk/blob/master/CHANGELOG.md#120), the application and daemon no longer have to reside on the same host and can now communicate over an IPv4 or IPv6 TCP socket. This repository contains a simple application that demonstrates how an instrumented application and daemon can be set up on separate containers.
 
 **Data transmitted from an instrumented application to the daemon is not encrypted. We recommend only using a private network connection between the app and daemon.**
 
