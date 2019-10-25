@@ -5,7 +5,7 @@ their own copyright notices and license terms. These notices are provided
 below.
 
 In the event that a required notice is missing or incorrect, please notify us
-either by [opening an issue](https://github.com/newrelic/c-sdk/issues/new), or
+either by [opening an issue](https://github.com/newrelic/c-sdk-container-example/issues/new), or
 by e-mailing [open-source@newrelic.com](mailto:open-source@newrelic.com).
 
 ## Dockerize
