@@ -1,0 +1,23 @@
+#------------------------------------------------------------------------------
+# Copyright [2019] New Relic Corporation. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#------------------------------------------------------------------------------
+
+version: '2.4'
+
+services:
+  app:
+    build:
+      context: app 
+    depends_on:
+      - "daemon"
+    environment:
+      NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY}
+      NEW_RELIC_APP_NAME: ${NEW_RELIC_APP_NAME}
+      NEW_RELIC_HOST: ${NEW_RELIC_HOST}
+      NEW_RELIC_DAEMON_ADDRESS: "daemon:31339"
+  daemon:
+    build:
+      context: daemon
+    expose:
+      - "31339"

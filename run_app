@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Actually run the application.
+docker-compose up --build
